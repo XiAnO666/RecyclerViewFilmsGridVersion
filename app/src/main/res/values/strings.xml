@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecycleViewFilms</string>
+    <string name="title_activity_film_details">FilmDetailsActivity</string>
+</resources>
