@@ -16,8 +16,6 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,12 +35,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun getMovies(): List<Films> {
 
         val client = OkHttpClient()
         val filmsList = mutableListOf<Films>()
-     for (page in 1..10){
+     for (page in 1..50){
         val request = Request.Builder()
             .url("https://api.themoviedb.org/3/movie/top_rated?language=es-ES&page=$page")
             .get()
